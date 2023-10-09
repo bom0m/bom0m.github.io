@@ -95,12 +95,13 @@
   
        .nav{
           height: calc(3.5rem + 1.5rem);
-       }
+       
        /*.blur-header::after{
           backdrop-filter: blur(25px);
       -webkit-backdrop-filter: blur(25px);    /* for safari  
        }*/
     }
+}
 
 
 
@@ -456,8 +457,8 @@
     }
 
     .footer .logo_{
-        width: 70%;
-        margin: 0 35%;
+        width: 40%;
+        margin: 0 30%;
     }
 
 
