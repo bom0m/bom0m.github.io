@@ -167,7 +167,7 @@ header img{
     display: flex;
     flex-direction: column;
     row-gap: 2.5rem;
-    margin-right: 1.5rem;
+    margin-right: 2rem;
 
 }
 .nav__link{
@@ -200,7 +200,11 @@ header img{
     position: absolute;
     top: 1rem;
     right: 1.5rem;
+}
 
+.nav__toggle{
+    top: 1rem;
+    margin-right: -2rem;
 }
 
 /* Show menu */
