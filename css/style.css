@@ -811,6 +811,7 @@ header img{
     border: 1px solid #fff;
     padding: 4rem;                     /* Hide any content that might overflow */
     background:  rgba(255,255,255,.1);
+    /*background:  #fff;*/
     border-radius: 15px;
     border-bottom: 1px solid rgba(255,255,255,0.5);
     border-right: 1px solid rgba(255,255,255,0.5);
@@ -826,15 +827,18 @@ header img{
 .box-1 h2{
     font-size: 2rem;
     padding: 2rem 0;
+    color: #999;
 }
 
 .box-1 p{
     font-size: 1.2rem;
     padding-bottom: 2rem;
+    color: #fff;
 }
 
 .wavy_div_content i {
-    color: #c03740;
+    /*color: #c03740;*/
+    color: #81d4ee;
     padding: 1rem;
     font-size: 2rem;
 }
@@ -845,7 +849,8 @@ header img{
 }
 
 .box-1:hover i{
-    color: #81d4ee;
+    /*color: #81d4ee;*/
+    color: #c03740;
 }
 
 
