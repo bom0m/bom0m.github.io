@@ -163,6 +163,7 @@ header img{
         top: -100%;
         left: 0;
         background-color: hsla(0, 0%, 0%, .3);
+        cursor: pointer;
         width: 100%;
         padding-block: 4rem;
         backdrop-filter: blur(24px);
@@ -292,6 +293,152 @@ header img{
 
 
 
+#cursor {
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    border-top: 5px solid #0f0;
+    border-left: 5px solid #0f0;
+    transform-origin: top;
+    transform: translate(-1px, 5px) rotate(15deg) scale(0);
+    transition: transform 0.1s;
+    pointer-events: none;
+    filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 15px #0f0)
+    drop-shadow(0 0 35px #0f0) hue-rotate(60deg);
+}
+
+#cursor::before {
+    content: '';
+    position: absolute;
+    left: -2.5px;
+    width: 5px;
+    height: 40px;
+    background: #0f0;
+    transform-origin: top;
+    transform: rotate(315deg);
+}
+
+body:hover #cursor {
+    transform: translate(-1px, 5px) rotate(15deg) scale(1);
+}
+
+.element {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: #0f0;
+    pointer-events: none;
+    width: 10px;
+    height: 10px;
+    transition: 1s;
+    font-size: 2em;
+    filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 15px #0f0)
+     hue-rotate(60deg);
+}
+
+
+
+.typing-container {
+    display: flex;
+    margin-top: 250px;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;                      /*changed by me from 40vh*/
+    background-color: none;
+    font-family: 'Poppins';
+   
+}
+
+.typing-text {
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #111;
+    animation: typing 10s steps(40) infinite, blink-caret 0.75s step-end infinite;
+
+}
+
+
+section {
+    position: relative;
+    /*width: 100%;
+    height: 100vh;*/
+    overflow: hidden;
+    /*background: #111;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section span {
+    position: fixed;
+    bottom: -50px;
+    background: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
+    animation: animate 4s linear infinite;
+}
+
+section span:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.25) translate(-70%, -70%);
+    background: radial-gradient(#fff, transparent);
+    border-radius: 50%;
+}
+
+
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #111;
+    }
+}
+
+
+
+@keyframes animate 
+{
+    0%
+    {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    99% 
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateY(-1200%);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
 /*==== ABOUT ==== */
 
 .about{
@@ -303,6 +450,7 @@ header img{
     gap: 1.5rem;
     margin-top:5rem;
     margin-bottom:5rem;
+    cursor: pointer;
 }
 
 .about-left{
@@ -377,6 +525,7 @@ header img{
     /*padding-top: 1rem;
     padding-bottom: 1rem;*/
     margin-bottom:7rem;
+    cursor: pointer;
 }
 
 .explore-left{
@@ -556,6 +705,7 @@ header img{
 #seo{
     padding: 5rem 0;
     margin-top: 5rem;
+    cursor: pointer;
 }
 
 
@@ -616,6 +766,7 @@ header img{
 #brannnd{
     padding: 5rem 0;
     margin-top: 5rem;
+    cursor: pointer;
 }
 
 
@@ -946,160 +1097,6 @@ header img{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#cursor {
-    position: fixed;
-    width: 25px;
-    height: 25px;
-    border-top: 5px solid #0f0;
-    border-left: 5px solid #0f0;
-    transform-origin: top;
-    transform: translate(-1px, 5px) rotate(15deg) scale(0);
-    transition: transform 0.1s;
-    pointer-events: none;
-    filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 15px #0f0)
-    drop-shadow(0 0 35px #0f0) hue-rotate(60deg);
-}
-
-#cursor::before {
-    content: '';
-    position: absolute;
-    left: -2.5px;
-    width: 5px;
-    height: 40px;
-    background: #0f0;
-    transform-origin: top;
-    transform: rotate(315deg);
-}
-
-body:hover #cursor {
-    transform: translate(-1px, 5px) rotate(15deg) scale(1);
-}
-
-.element {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    color: #0f0;
-    pointer-events: none;
-    width: 10px;
-    height: 10px;
-    transition: 1s;
-    font-size: 2em;
-    filter: drop-shadow(0 0 5px #0f0) drop-shadow(0 0 15px #0f0)
-     hue-rotate(60deg);
-}
-
-
-
-.typing-container {
-    display: flex;
-    margin-top: 250px;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;                      /*changed by me from 40vh*/
-    background-color: none;
-    font-family: 'Poppins';
-   
-}
-
-.typing-text {
-    position: absolute;
-    font-size: 30px;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 2px solid #111;
-    animation: typing 10s steps(40) infinite, blink-caret 0.75s step-end infinite;
-
-}
-
-
-section {
-    position: relative;
-    /*width: 100%;
-    height: 100vh;*/
-    overflow: hidden;
-    /*background: #111;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-section span {
-    position: fixed;
-    bottom: -50px;
-    background: transparent;
-    border-radius: 50%;
-    pointer-events: none;
-    box-shadow: inset 0 0 10px rgba(255,255,255,0.5);
-    animation: animate 4s linear infinite;
-}
-
-section span:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transform: scale(0.25) translate(-70%, -70%);
-    background: radial-gradient(#fff, transparent);
-    border-radius: 50%;
-}
-
-
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: #111;
-    }
-}
-
-
-
-@keyframes animate 
-{
-    0%
-    {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-    99% 
-    {
-        opacity: 1;
-    }
-    100%
-    {
-        transform: translateY(-1200%);
-        opacity: 1;
-    }
-}
 
 
 

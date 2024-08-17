@@ -80,11 +80,13 @@
     .nav__close,
     .nav__toggle{
        display: none;
+       cursor: pointer;
     }
 
     .nav__list{
        flex-direction: row;
        column-gap: 4rem;
+       cursor: pointer;
     }
 }
     @media screen and (min-width: 1152px){
@@ -118,6 +120,7 @@
 
     #showcase .content {
         width: 100%;
+        cursor: pointer;
     }
     /*.navbar .btn {
         display: block;
@@ -171,6 +174,7 @@
 
     .home__scroll{
         margin-bottom: 7.5rem;
+        cursor: pointer;
     }
 
     .about-right .vertical-text {
@@ -279,6 +283,7 @@
         transform: rotate(-180deg);
         color: #FAFAFF;
         margin-bottom: -14rem;
+        cursor: pointer;
     }
 
     /*.explore{
@@ -292,6 +297,7 @@
         overflow: hidden;
         white-space: wrap;  /*wrap*/
         margin-bottom: .5rem;
+        cursor: pointer;
     }
 
     .explore-left .info p{
@@ -312,6 +318,7 @@
       .explore-right{
         flex: 1 1 auto;
         /*flex: 1 1 30rem;*/
+        cursor: pointer;
       }
 
       .explore-right .clock{
@@ -325,40 +332,51 @@
         grid-template-columns: repeat(1, 1fr);
         width: 80;
         height: 80;
+        cursor: pointer;
     }
 
     .brannnd_content {
         grid-template-columns: repeat(1, 1fr);
         width: 80;
         height: 80;
+        cursor: pointer;
     }
 
     .mancomp_content {
         grid-template-columns: repeat(1, 1fr);
         width: 80;
         height: 80;
+        cursor: pointer;
     }
+
     .uiux_content {
         grid-template-columns: repeat(1, 1fr);
         width: 80;
         height: 80;
+        cursor: pointer;
     }
 
     .wavy_div_content {
         grid-template-columns: repeat(1, 1fr);
+        cursor: pointer;
     }
+
+
     .footer .logo_{
         width: 70%;
         margin: 0 35%;
+        cursor: pointer;
     }
 
 
     .footer .share i{
         font-size: 1.3rem;
+        cursor: pointer;
     }
 
     .footer P {
         font-size: .8rem;
+        cursor: pointer;
     }
 
 
@@ -380,6 +398,7 @@
         width: 150%;    
         height: 150%;
         flex: 1 1 40rem; 
+        cursor: pointer;
     }
                            
 
@@ -393,6 +412,7 @@
         .explore-right {
           flex: 1 1 auto;  /*Reset the flex properties to make them stack*/ 
           padding: 0 1rem;  /*Adjust padding as needed for smaller screens*/ 
+          cursor: pointer;
         }
 
         .explore-left .info p{
